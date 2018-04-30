@@ -23,7 +23,7 @@ class Blockchain {
       const block = chain[i];
       const lastBlock = chain[i - 1];
 
-      if (block.lastBlock !== lastBlock.hash ||
+      if (block.lastHash !== lastBlock.hash ||
           block.hash !== Block.blockHash(block)) {
         return false;
       }
